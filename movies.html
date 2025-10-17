@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies Chat - Real Chat</title>
+  <link rel="stylesheet" href="movies.css">
+  <script src="movies.js" defer></script>
+  <style>
+    /* Movie gallery styling */
+    .movie-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+
+    .movie-card {
+      text-align: center;
+      width: 180px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .movie-card a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    body {
+      background-color: #0b0b0b;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    header, footer {
+      text-align: center;
+      background-color: #222;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    .chat-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎬 Movies Chat Room</h1>
+    <nav>
+      <ul style="list-style: none; display: flex; justify-content: center; gap: 20px;">
+        <li><a href="categ.html" style="color: #00ffcc;">← Back to Categories</a></li>
+        <li><a href="profile.html" style="color: #00ffcc;">Profile</a></li>
+        <li><a href="#" id="logoutBtn" style="color: #00ffcc;">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🎥 Movie Gallery -->
+  <section class="movie-gallery">
+    <div class="movie-card">
+      <a href="https://www.google.com/search?q=Leo+movie" target="_blank">
+        <img src="download.jpg" alt="Leo Movie Poster">
+        Leo (2023)
+      </a>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://www.google.com/search?q=Jawan+movie" target="_blank">
+        <img src="download (1).jpg" alt="Jawan Movie Poster">
+       
+        Jawan (2023)
+      </a>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://www.google.com/search?q=KGF+Chapter+2" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/d/d0/K.G.F_Chapter_2.jpg" alt="KGF Chapter 2 Poster">
+        KGF Chapter 2
+      </a>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://www.google.com/search?q=Vikram+movie" target="_blank">
+        <img src="download (3).jpg" alt="Vikram Movie Poster">
+        Vikram (2022)
+      </a>
+    </div>
+
+    <div class="movie-card">
+      <a href="https://www.google.com/search?q=RRR+movie" target="_blank">
+        <img src="download (2).jpg" alt="RRR Movie Poster">
+        RRR (2022)
+      </a>
+    </div>
+  </section>
+
+  <main class="chat-container">
+    <div class="chat-window" id="chatWindow">
+      <p><strong>Admin:</strong> Welcome to the Movies chat! 🍿 Discuss your favorite films!</p>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="messageInput" placeholder="Type your message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Real Chat. All rights reserved.</p>
+  </footer>
+</body>
+</html>

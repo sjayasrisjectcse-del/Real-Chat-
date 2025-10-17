@@ -1,0 +1,114 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #00e676;
+}
+
+/* 🌐 Technology Gallery */
+.tech-gallery {
+  padding: 2rem;
+}
+
+.tech-gallery h2 {
+  margin-bottom: 1rem;
+  color: #00e5ff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.gallery-grid a {
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.gallery-grid a:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.gallery-grid img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* 💬 Chat Box */
+.chat-container {
+  margin: 2rem auto;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.chat-window {
+  height: 250px;
+  overflow-y: auto;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.chat-input {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.chat-input button {
+  background: #00bfa5;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background: #00e676;
+}

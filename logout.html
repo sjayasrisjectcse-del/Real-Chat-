@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logout - Real Chat</title>
+  <link rel="stylesheet" href="logout.css">
+</head>
+<body>
+  <div class="logout-container">
+    <div class="logout-box">
+      <h1>👋 You’ve been logged out!</h1>
+      <p>Thank you for using <strong>Real Chat</strong>. We hope to see you again soon!</p>
+      
+      <div class="animation">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+
+      <button onclick="redirectToLogin()">🔐 Back to Login</button>
+    </div>
+  </div>
+
+  <script>
+    function redirectToLogin() {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

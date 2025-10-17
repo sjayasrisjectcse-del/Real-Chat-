@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile - Real Chat</title>
+  <link rel="stylesheet" href="profile.css" />
+  
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-card">
+      <div class="profile-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="User Avatar" class="profile-pic" />
+        <h2 id="nameDisplay"></h2>
+        <p class="tagline" id="taglineDisplay">💬 Chat Lover | 🌐 Tech Explorer | 🎶 Music Fan</p>
+      </div>
+
+      <div class="profile-details">
+        <h3>Profile Information</h3>
+        <ul>
+          <li><strong>Email:</strong> <span id="emailDisplay">jayasri@example.com</span></li>
+          <li><strong>Username:</strong> @jayasri_s</li>
+          <li><strong>Member Since:</strong> March 2024</li>
+          <li><strong>Status:</strong> 🟢 Online</li>
+        </ul>
+      </div>
+
+      <div class="profile-actions">
+        <button class="edit-btn" id="editBtn">✏️ Edit Profile</button>
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+      </div>
+
+      <div class="profile-footer">
+        <a href="dash.html" class="back-btn">← Back to Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const editBtn = document.getElementById("editBtn");
+    let editing = false;
+
+    editBtn.addEventListener("click", () => {
+      const name = document.getElementById("nameDisplay");
+      const tagline = document.getElementById("taglineDisplay");
+      const email = document.getElementById("emailDisplay");
+
+      if (!editing) {
+        // Switch to edit mode
+        editing = true;
+        editBtn.textContent = "💾 Save Changes";
+
+        name.innerHTML = `<input type="text" class="editable" id="nameInput" value="${name.textContent}">`;
+        tagline.innerHTML = `<input type="text" class="editable" id="taglineInput" value="${tagline.textContent}">`;
+        email.innerHTML = `<input type="email" class="editable" id="emailInput" value="${email.textContent}">`;
+      } else {
+        // Save the changes
+        editing = false;
+        editBtn.textContent = "✏️ Edit Profile";
+
+        const newName = document.getElementById("nameInput").value;
+        const newTagline = document.getElementById("taglineInput").value;
+        const newEmail = document.getElementById("emailInput").value;
+
+        name.textContent = newName;
+        tagline.textContent = newTagline;
+        email.textContent = newEmail;
+
+        alert("✅ Profile updated successfully!");
+      }
+    });
+
+    function logout() {
+      window.location.href = "logout.html";
+    }
+  </script>
+</body>
+</html>

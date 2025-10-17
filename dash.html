@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Chat Dashboard</title>
+  <link rel="stylesheet" href="dash.css">
+  <script src="dash.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>💬 Real Chat Dashboard</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="categ.html">Categories</a></li>
+        <li><a href="logout.html" id="logoutBtn">Logout</a></li>
+        <li><a href="about.html" >About us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <aside class="user-list">
+      <h2>Online Users (<span id="userCount">0</span>)</h2>
+      <ul id="users">
+        </ul>
+    </aside>
+
+    <section class="chat-section">
+      <div class="chat-box">
+        <div id="chatWindow">
+          <p>
+            <strong>Admin:</strong> Welcome to Real Chat! 👋
+            <span class="timestamp">10:30 PM</span>
+          </p>
+        </div>
+        <div id="typingIndicator" class="typing-indicator">
+          </div>
+        <div class="chat-input">
+          <input type="text" id="messageInput" placeholder="Type your message...">
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Real Chat. All rights reserved.</p>
+  </footer>
+</body>
+</html>

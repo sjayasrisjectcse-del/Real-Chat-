@@ -1,0 +1,112 @@
+/* --- Reset and Base Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* --- Logout Container --- */
+.logout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logout-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 50px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* --- Heading and Text --- */
+.logout-box h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00ffd0;
+}
+
+.logout-box p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #d8d8d8;
+}
+
+/* --- Button --- */
+.logout-box button {
+  background: linear-gradient(45deg, #00ffa1, #00c3ff);
+  color: #0b0b0b;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logout-box button:hover {
+  background: linear-gradient(45deg, #00c3ff, #00ffa1);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffc6;
+}
+
+/* --- Animation Bubbles --- */
+.animation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.bubble {
+  width: 10px;
+  height: 10px;
+  background-color: #00ffe7;
+  border-radius: 50%;
+  animation: bubble 1.5s infinite ease-in-out;
+}
+
+.bubble:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bubble:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* --- Animations --- */
+@keyframes bubble {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

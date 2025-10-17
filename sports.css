@@ -1,0 +1,69 @@
+
+ .sports-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+
+  .sports-card {
+      text-align: center;
+      width: 180px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+ .sports-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    }
+
+  .sports-card img {
+      width: 100%;
+      height: 150px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+  .sports-card a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    body {
+      background-color: #0b0b0b;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    header, footer {
+      text-align: center;
+      background-color: #222;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+    }
+
+    nav a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+
+    .chat-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+  

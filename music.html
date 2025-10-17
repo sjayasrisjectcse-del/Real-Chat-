@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎵 Music Chat</title>
+  <link rel="stylesheet" href="music.css" />
+  <script src="music.js" defer></script>
+</head>
+<body>
+  <div class="header">
+    <h1>🎧 Music Chat Room</h1>
+    <a href="categ.html" class="back-btn">← Back to Categories</a>
+  </div>
+
+  <center>
+  <!-- 🎧 TVK Music Player -->
+  <div class="music-player">
+    <h3>Now Playing: Tamilaga Vettri Kazhagam Anthem</h3>
+    <audio id="musicPlayer" controls autoplay loop>
+      <source src="c:\Users\Dell\Downloads\Tamilaga-Vettri-Kazhagam-(Flag-Anthem)-MassTamilan.dev.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- 🔍 Search Songs Section -->
+  <div class="search-section">
+    <h2>🎶 Search Songs</h2>
+    <input type="text" id="searchInput" placeholder="Search for a song..." />
+  </div>
+
+  <!-- 🎵 Song List -->
+  <div class="song-list" id="songList">
+    <div class="song" data-title="Tamilaga Vettri Kazhagam Anthem">
+      <h4>🎧 Tamilaga Vettri Kazhagam Anthem</h4>
+      <a href="c:\Users\Dell\Downloads\Tamilaga-Vettri-Kazhagam-(Flag-Anthem)-MassTamilan.dev.mp3" target="_blank">▶ Play Song</a>
+    </div>
+
+    <div class="song" data-title="Vaa Vaathi - Vaathi">
+      <h4>🎤 Vaa Vaathi - Vaathi</h4>
+      <a href="https://youtu.be/592mNGkpYig?si=OEv__Es0kZEqiKM1" target="_blank">▶ Watch on YouTube</a>
+    </div>
+
+    <div class="song" data-title="Arabic Kuthu - Beast">
+      <h4>💃 Arabic Kuthu - Beast</h4>
+      <a href="https://youtu.be/KUN5Uf9mObQ?si=bvFkrlTPrIZM6A0p" target="_blank">▶ Watch on YouTube</a>
+    </div>
+
+    <div class="song" data-title="Sidu Sidu">
+      <h4>Sidu Sidu</h4>
+      <a href="https://youtu.be/Dyt1jelmjY0?si=fQgu8a-GywALEUFJ" target="_blank">▶ Watch on YouTube</a>
+    </div>
+
+    <div class="song" data-title="Kadhalai Solla Mudhiyadhu">
+      <h4>🎶 Kadhalai Solla Mudhiyadhu</h4>
+      <a href="https://youtu.be/AIFjQ3RIAOQ?si=oibsTbB7KMv-d8pV" target="_blank">▶ Watch on YouTube</a>
+    </div>
+  </div>
+
+  <!-- 💬 Chat Section -->
+  <div class="chat-container">
+    <div class="messages" id="musicMessages"></div>
+    <div class="input-area">
+      <input type="text" id="musicInput" placeholder="Type your message..." />
+      <button id="sendMusicBtn">Send</button>
+    </div>
+  </div>
+  </center>
+
+  <footer>
+    <p>© 2025 Real Chat. All rights reserved.</p>
+  </footer>
+
+
+   <script>
+    // Function to send message
+    function sendMusicMsg() {
+      const input = document.getElementById('musicInput');
+      const msgBox = document.getElementById('musicMessages');
+      const msg = input.value.trim();
+
+      if (msg !== '') {
+        const div = document.createElement('div');
+        div.className = 'message';
+        div.textContent = msg;
+        msgBox.appendChild(div);
+
+        // Auto-scroll to bottom
+        msgBox.scrollTop = msgBox.scrollHeight;
+
+        // Clear input
+        input.value = '';
+      }
+    }
+
+    // Allow pressing "Enter" to send message
+    document.getElementById('musicInput').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') sendMusicMsg();
+    });
+
+    document.getElementById('sendMusicBtn').addEventListener('click', sendMusicMsg);
+  </script>
+  </body>
+</html>

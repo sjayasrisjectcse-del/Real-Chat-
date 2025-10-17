@@ -1,0 +1,106 @@
+
+    body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .profile-container {
+      width: 90%;
+      max-width: 400px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .profile-container:hover {
+      transform: translateY(-5px);
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #667eea;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .tagline {
+      color: #777;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+
+    .profile-details ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .profile-details li {
+      margin: 8px 0;
+      font-size: 0.95em;
+    }
+
+    .profile-actions {
+      margin-top: 20px;
+    }
+
+    .edit-btn, .logout-btn {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    .edit-btn:hover {
+      background: #764ba2;
+    }
+
+    .logout-btn {
+      background: #e63946;
+    }
+
+    .logout-btn:hover {
+      background: #d62828;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      color: #667eea;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    input.editable {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 5px;
+      width: 90%;
+      margin-top: 3px;
+      font-size: 0.9em;
+    }
+

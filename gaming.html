@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaming Chat</title>
+  <link rel="stylesheet" href="gaming.css" />
+</head>
+<body>
+  <center>
+    <div class="header">
+      <h1>🎮 Gaming Chat</h1>
+      <a href="categ.html" class="back-btn">← Back to Categories</a>
+    </div>
+
+    <!-- 🎯 Gaming Links Section -->
+    <div class="game-links">
+      <h2>Top Trending Games</h2>
+      <div class="game-list">
+        <a href="https://www.playvalorant.com/" target="_blank">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1272080/header.jpg" alt="Valorant" />
+          <p>Valorant</p>
+        </a>
+
+        <a href="https://www.pubg.com/" target="_blank">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/578080/header.jpg" alt="PUBG" />
+          <p>PUBG: Battlegrounds</p>
+        </a>
+
+         <a href="https://www.callofduty.com/warzone" target="_blank">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1962663/header.jpg" alt="Call of Duty: Warzone" />
+          <p>Call of Duty: Warzone</p>
+        </a>
+
+        <a href="https://www.minecraft.net/" target="_blank">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1672970/header.jpg" alt="Minecraft" />
+          <p>Minecraft</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- 💬 Gaming Chat Section -->
+    <div class="chat-container">
+      <div class="messages" id="gamingMessages"></div>
+
+      <div class="input-area">
+        <input type="text" id="gamingInput" placeholder="Type your message..." />
+        <button onclick="sendGamingMsg()">Send</button>
+      </div>
+    </div>
+  </center>
+
+  <script>
+    function sendGamingMsg() {
+      const input = document.getElementById('gamingInput');
+      const msgBox = document.getElementById('gamingMessages');
+      const msg = input.value.trim();
+
+      if (msg !== '') {
+        const div = document.createElement('div');
+        div.className = 'message';
+        div.textContent = msg;
+        msgBox.appendChild(div);
+
+        msgBox.scrollTop = msgBox.scrollHeight;
+        input.value = '';
+      }
+    }
+  </script>
+</body>
+</html>
